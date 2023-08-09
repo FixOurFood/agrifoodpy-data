@@ -1,2 +1,1 @@
-recursive-include *.nc 
-recursive-exclude *.ipynb
+recursive-include *.nc
