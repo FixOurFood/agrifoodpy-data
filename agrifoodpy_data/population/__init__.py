@@ -15,7 +15,11 @@ def __getattr__(name):
     # If the file contains more than a single dataarray, then it will try
     # to load it as a dataset
     try:
-        data = xr.open_dataarray(_data_file)
+        with xr.open_dataset(_data_file) as data:
+            data.load()
+            return data
+        
     except ValueError:
-        data = xr.open_dataset(_data_file)
-    return data
+        with xr.open_dataarray(_data_file) as data:
+            data.load()
+            return data
