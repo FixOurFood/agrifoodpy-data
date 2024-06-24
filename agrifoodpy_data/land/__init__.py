@@ -1,4 +1,4 @@
-"""Food module"""
+"""Land module"""
 
 import os
 import xarray as xr
