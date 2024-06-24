@@ -4,15 +4,14 @@ import os
 import xarray as xr
 
 available = [
-    "ALC_500",
-    "ALC_1000",
-    "ALC_2000",
-    "ALC_5000",
-    "CEH_5000",
-    "UKCEH_LC_1000",
-    "UKCEH_LCPCP_1000",
-    "UKCEH_LCPCP_2000",
-    "UKCEH_LCPCP_5000",
+    "NaturalEngland_ALC_1000",
+    "NaturalEngland_ALC_2000",
+    "NaturalEngland_ALC_5000",
+    "UKCEH_LC_1000_gb",
+    "UKCEH_LC_1000_ni",
+    "UKCEH_LCPCP_1000_gb",
+    "UKCEH_LCPCP_2000_gb",
+    "UKCEH_LCPCP_5000_gb",
              ]
 
 data_dir = os.path.join(os.path.dirname(__file__), 'data/' )
