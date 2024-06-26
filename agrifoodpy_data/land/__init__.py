@@ -7,6 +7,7 @@ available = [
     "NaturalEngland_ALC_1000",
     "NaturalEngland_ALC_2000",
     "NaturalEngland_ALC_5000",
+    "UKCEH_LC_1000",
     "UKCEH_LC_1000_gb",
     "UKCEH_LC_1000_ni",
     "UKCEH_LCPCP_1000_gb",
