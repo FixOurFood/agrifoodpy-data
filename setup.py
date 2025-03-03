@@ -19,7 +19,9 @@ INSTALL_REQUIRES = [
       'pandas',
       'xarray',
       'matplotlib',
-      'netcdf4'
+      'netcdf4',
+      'hdf5',
+      'cftime'
 ]
 
 setup(name=PACKAGE_NAME,
