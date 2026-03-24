@@ -12,7 +12,9 @@ This document provides a comprehensive list of datasets available in AgriFoodPy 
 - **PN18**: Environmental impact data from Poore & Nemecek (2018) study on food systems.
 - **PN18_FAOSTAT**: Merged PN18 and FAOSTAT data for comprehensive impact analysis.
 - **PN18_regional**: Regional breakdowns of PN18 impact data.
-- **UKNDC_FAOSTAT**: UK-specific nutrient and dietary composition data merged with FAOSTAT.
+- **UKNDC_FAOSTAT**: UK-specific greenhouse gas emission factors refactored for the FAOSTAT item base.
+- **CB7_balanced_pathway_sector**: Yearly sectoral emissions for the CB7 Balanced Pathway scenario 
+- **CB7_balanced_pathway_subsector**: Yearly sub-sectoral emissions for the CB7 Balanced Pathway scenario 
 
 ## Land
 
