@@ -3,7 +3,7 @@
 import os
 import xarray as xr
 
-available = ['PN18', 'PN18_FAOSTAT', 'PN18_regional', 'UKNDC_FAOSTAT']
+available = ['PN18', 'PN18_FAOSTAT', 'PN18_regional', 'UKNDC_FAOSTAT', 'CB7_balanced_pathway_sector', 'CB7_balanced_pathway_subsector']
 data_dir = os.path.join(os.path.dirname(__file__), 'data/' )
 
 def __getattr__(name):
