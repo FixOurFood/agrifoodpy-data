@@ -11,9 +11,11 @@ def raster_gdf(
     resolution: float,
     crs: str = None,
     bounds: tuple = None,
-    anchor: tuple = None
+    anchor: tuple = None,
+    additional_coords: list = []
 ) -> xr.Dataset:
-    """Rasterise a GeoDataFrame and return a xarray Dataset.
+    """Rasterise a GeoDataFrame and return a xarray Dataset with optional
+    additional label coordinates.
 
     Parameters
     ----------
@@ -82,8 +84,9 @@ def raster_gdf(
     points = gpd.GeoDataFrame(df, crs=target_crs)
     
     # Create a dictionary with geometry names as keys and index as items
-    gdf_unique_vals = np.unique(gdf[value_column])
-    vals_index_dict = {name: idx for idx, name in enumerate(gdf_unique_vals)}
+    gdf_vals = gdf[value_column].to_numpy()
+
+    vals_index_dict = {name: idx for idx, name in enumerate(gdf_vals)}
 
     # Find the points that fall within the boundary polygons
     within_bdry = gpd.sjoin(points, gdf, how='inner', predicate='within')
@@ -96,17 +99,23 @@ def raster_gdf(
     raster[tuple([within_bdry['ypos'], within_bdry['xpos']])] \
           = within_bdry['_index']
 
+    coords = {
+            "x": xcoords,
+            "y": ycoords,
+            "ID": list(vals_index_dict.values()),
+            value_column: ("ID", list(vals_index_dict.keys())),
+        }
+
+    for ad_coord in additional_coords:
+        coords[ad_coord] = ("ID", gdf[ad_coord].to_numpy())
+
+
     # Create a dataset with x, y, and Region dimensions
     ds = xr.Dataset(
         data_vars={
             name: (["y", "x"], raster)
         },
-        coords={
-            "x": xcoords,
-            "y": ycoords,
-            "ID": list(vals_index_dict.values()),
-            "Region": ("ID", list(vals_index_dict.keys())),
-        },
+        coords=coords,
     )
 
     return ds
