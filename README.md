@@ -71,10 +71,17 @@ To intall AgriFoodPy Data during development:
 pip install git+https://github.com/FixOurFood/agrifoodpy-data.git
 ```
 
-For stable releases (once available), use:
+For stable releases, use:
 
 ```bash
 pip install agrifoodpy-data
+```
+
+If you want the geo utilities in `agrifoodpy_data.land.utils`, install the
+optional extra:
+
+```bash
+pip install "agrifoodpy-data[geo]"
 ```
 
 ## Usage

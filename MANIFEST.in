@@ -1,2 +1,5 @@
 recursive-include agrifoodpy_data *.nc
+include LICENCE
+recursive-include LICENSES *
+include datasets.md
 
