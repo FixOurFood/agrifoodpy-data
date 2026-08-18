@@ -4,7 +4,10 @@ A food balance sheet presents a comprehensive picture of the pattern of a countr
 
 ## Available datasets
 
-- **FAOSTAT** Food Balance Sheets between 1961 and 2020
+- **FAOSTAT** Food Balance Sheets between 1961 and 2020, combining old and new FAO methodologies
+- **Nutrients_FAOSTAT** Food item nutrient and energy contents derived from nutrient supply (Proteins, Fats, kCal) combining old and new FAO methodologies
+- **FAOSTAT_FBS** Food Balance Sheet (2010-) using new FAO methodology
+- **Nutrients_FAOSTAT_FBS** Food item nutrient and energy contents derived from nutrient supply (Proteins, Fats, kCal) using new FAO methodology
 
 # Licence
 

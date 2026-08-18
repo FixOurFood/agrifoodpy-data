@@ -8,6 +8,7 @@ available = [
     "UN",
     "UK_ONS",
     "UK_ONS_MYE24UK",
+    "Population_FAOSTAT_FBS",
 ]
 
 data_dir = os.path.join(os.path.dirname(__file__), 'data/' )

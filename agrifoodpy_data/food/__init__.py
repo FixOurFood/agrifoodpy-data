@@ -3,7 +3,12 @@
 import os
 import xarray as xr
 
-available = ['FAOSTAT', "Nutrients_FAOSTAT"]
+available = [
+    'FAOSTAT',
+    "Nutrients_FAOSTAT",
+    "FAOSTAT_FBS",
+    "Nutrients_FAOSTAT_FBS",
+    ]
 data_dir = os.path.join(os.path.dirname(__file__), 'data/' )
 
 def __getattr__(name):
