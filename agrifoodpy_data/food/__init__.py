@@ -8,7 +8,7 @@ available = [
     "Nutrients_FAOSTAT",
     "FAOSTAT_FBS",
     "Nutrients_FAOSTAT_FBS",
-    "UK_LIVESTOCK",
+    "UK_LIVESTOCK_LAD",
     ]
 data_dir = os.path.join(os.path.dirname(__file__), 'data/' )
 
